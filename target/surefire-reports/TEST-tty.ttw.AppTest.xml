@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="tty.ttw.AppTest" time="0.017" tests="1" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="sun.desktop" value="windows"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="exec.mainClass" value="tty.ttw.App"/>
+    <property name="java.specification.version" value="11"/>
+    <property name="sun.cpu.isalist" value=""/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\ilyas\programming\artyxi\target\test-classes;C:\Users\ilyas\programming\artyxi\target\classes;C:\Users\ilyas\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\ilyas\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
+    <property name="java.vm.vendor" value="Eclipse Adoptium"/>
+    <property name="sun.arch.data.model" value="32"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://adoptium.net/"/>
+    <property name="user.timezone" value="America/New_York"/>
+    <property name="java.vm.specification.version" value="11"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="C:\java_installs\jdk-11.0.19+7\bin"/>
+    <property name="sun.java.command" value="C:\Users\ilyas\AppData\Local\Temp\surefire5696827568960911312\surefirebooter10695037727241138700.jar C:\Users\ilyas\AppData\Local\Temp\surefire5696827568960911312 2024-05-21T21-57-49_585-jvmRun1 surefire15859530180597563988tmp surefire_017362972864269063987tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\ilyas\programming\artyxi\target\test-classes;C:\Users\ilyas\programming\artyxi\target\classes;C:\Users\ilyas\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\ilyas\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\ilyas"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2023-04-18"/>
+    <property name="java.home" value="C:\java_installs\jdk-11.0.19+7"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\ilyas\programming\artyxi"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="C:\Users\ilyas\AppData\Local\Temp\surefire5696827568960911312\surefirebooter10695037727241138700.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot Client Compiler"/>
+    <property name="java.runtime.version" value="11.0.19+7"/>
+    <property name="user.name" value="ilyas"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="OpenJDK Client VM"/>
+    <property name="java.vendor.version" value="Temurin-11.0.19+7"/>
+    <property name="localRepository" value="C:\Users\ilyas\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
+    <property name="java.io.tmpdir" value="C:\Users\ilyas\AppData\Local\Temp\"/>
+    <property name="java.version" value="11.0.19"/>
+    <property name="user.dir" value="C:\Users\ilyas\programming\artyxi"/>
+    <property name="os.arch" value="x86"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.library.path" value="C:\java_installs\jdk-11.0.19+7\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\java_installs\jdk-11.0.19+7/bin;C:\java_installs\openlogic-openjdk-8u372-b07-windows-64/bin;C:\Users\ilyas\AppData\Local\nvim-data/mason/bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\apache-maven-3.8.6-bin\apache-maven-3.8.6\bin;C:\Program Files\Git\cmd;C:\Program Files\xmrig-6.20.0;C:\Program Files\monero-x86_64-w64-mingw32-v0.18.2.2;C:\Program Files (x86)\Gpg4win\..\GnuPG\bin;C:\Program Files (x86)\Gpg4win\bin;C:\Program Files (x86)\GnuPG\bin;C:\Program Files\nodejs\;C:\Gradle\gradle-8.2.1\bin;C:\Program Files\apache-maven-3.9.5\bin;C:\Users\ilyas\scoop\apps\neovim\current\bin;C:\Program Files\scripts;C:\Users\ilyas\AppData\Roaming\npm;C:\Program Files\WindowsPowerShell\Scripts;C:\Program Files\Mozilla Firefox;C:\haskell_installs\ghc-9.8.2-x86_64-unknown-mingw32\bin;C:\android_installs\bin;C:\Users\ilyas\mongosh-2.2.3-win32-x64\bin;C:\groovy_installs\groovy-4.0.12\bin;C:\Program Files\PostgreSQL\16\bin;C:\Program Files\PostgreSQL\16\lib;C:\python_installs\Python312;C:\Users\ilyas\AppData\Local\pnpm;C:\Users\ilyas\scoop\shims;C:\Program Files (x86)\Elm\0.19.1\bin;C:\Program Files\CMake\bin;C:\Program Files (x86)\MongoDB CLI\;C:\Users\ilyas\scoop\apps\neovim\current\bin;C:\Users\ilyas\scoop\apps\neovim\current\bin;."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Eclipse Adoptium"/>
+    <property name="java.vm.version" value="11.0.19+7"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="55.0"/>
+  </properties>
+  <testcase name="shouldAnswerWithTrue" classname="tty.ttw.AppTest" time="0"/>
+</testsuite>
