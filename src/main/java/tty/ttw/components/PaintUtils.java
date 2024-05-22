@@ -42,6 +42,6 @@ public final class PaintUtils {
 
     g.fillRoundRect(x, pop.y, w, h*2, pop.aw, pop.ah);
     g.setColor(new Color(pop.color.getRed(), pop.color.getGreen(), pop.color.getBlue(), pop.alpha));
-    g.drawString(pop.msg, (int)Utils.compute_str_with_font(pop.msg, g), pop.y + (int)h);
+    g.drawString(pop.msg, (int)w/2 + (int)Utils.compute_str_with_font(pop.msg, g), pop.y + (int)h);
   }
 }

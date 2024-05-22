@@ -4,5 +4,6 @@ public enum AppState {
   LOADING,
   OPENING,
   STATISTICS,
-  CLOSING
+  CLOSING,
+  MENU
 }

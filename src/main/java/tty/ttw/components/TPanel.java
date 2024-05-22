@@ -26,7 +26,7 @@ public class TPanel extends JPanel {
   public static int cx    = 0;
   public static int ck    = 0;
   public static float cw  = 0f;
-  public static int steps = 30;
+  public static int steps = 75;
 
   // to set up
   public static Color color1 = Color.RED;
@@ -156,20 +156,36 @@ public class TPanel extends JPanel {
           }
         }
 
-        g.setFont(g.getFont().deriveFont(20f));
+        g.setFont(g.getFont().deriveFont(15f));
 
         if (cx <= 200){
           str = "Tap <Enter/> To Start The Main Process";
           g.drawString(str, ((int)W/2 - (int)Utils.compute_str_with_font(str, g)/2), (int)H/2 + 225);
+
+          str = "Tap <M/> To Toggle Menu";
+          g.drawString(str, ((int)W/2 - (int)Utils.compute_str_with_font(str, g)/2), (int)H/2 + 250);
+
         } if (cx > 200 && cx <= 500) {
           str = "Tap <Enter/> To Start The Main Process.";
           g.drawString(str, ((int)W/2 - (int)Utils.compute_str_with_font(str, g)/2), (int)H/2 + 225);
+
+          str = "Tap <M/> To Toggle Menu.";
+          g.drawString(str, ((int)W/2 - (int)Utils.compute_str_with_font(str, g)/2), (int)H/2 + 250);
+
         } if (cx > 500 && cx <= 700){
           str = "Tap <Enter/> To Start The Main Process..";
           g.drawString(str, ((int)W/2 - (int)Utils.compute_str_with_font(str, g)/2), (int)H/2 + 225);
+
+          str = "Tap <M/> To Toggle Menu..";
+          g.drawString(str, ((int)W/2 - (int)Utils.compute_str_with_font(str, g)/2), (int)H/2 + 250);
+
         } if (cx > 700){
           str = "Tap <Enter/> To Start The Main Process...";
           g.drawString(str, ((int)W/2 - (int)Utils.compute_str_with_font(str, g)/2), (int)H/2 + 225);
+
+          str = "Tap <M/> To Toggle Menu...";
+          g.drawString(str, ((int)W/2 - (int)Utils.compute_str_with_font(str, g)/2), (int)H/2 + 250);
+
           cx = 0;
         }
 
@@ -271,9 +287,82 @@ public class TPanel extends JPanel {
           System.exit(0);
         }
 
-        cw += 1;
+        cw += 0.05;
         break;
       }
+
+
+      case MENU: {
+        str = "<Menu/>";
+
+        int ssy = 100;
+
+        g.setColor(Color.BLACK);
+        g.setFont(g.getFont().deriveFont(20f));
+        g.drawString(str, ((int)W/2 - (int)Utils.compute_str_with_font(str, g)/2), ssy);
+        g.setFont(g.getFont().deriveFont(15f));
+
+        final int ddy = Utils.compute_str_with_font_h(str, g)*2;
+        final int ddx = 50;
+        final int cx  = (int)Utils.compute_str_with_font("</Toggle Menu           :: M", g)/2;
+
+        ssy += 100;
+        ssy += ddy;
+        str = "</Toggle Menu           :: M";
+        g.drawString(str, (int)W/2 - cx, ssy);
+
+        ssy += ddy;
+        str = "</Toggle Statistics     :: S";
+        g.drawString(str, (int)W/2 - cx, ssy);
+
+        ssy += ddy;
+        str = "</Toggle Exit           :: ESCAPE";
+        g.drawString(str, (int)W/2 - cx, ssy);
+
+        ssy += ddy;
+        str = "</Toggle Restart Server :: R";
+        g.drawString(str, (int)W/2 - cx, ssy);
+
+        ssy += ddy;
+        str = "</Toggle Start Server   :: ENTER";
+        g.drawString(str, (int)W/2 - cx, ssy);
+
+        break;
+      }
+
+      case STATISTICS: {
+        str = "<Statistics/>";
+
+        int ssy = 100;
+
+        g.setColor(Color.BLACK);
+        g.setFont(g.getFont().deriveFont(20f));
+        g.drawString(str, ((int)W/2 - (int)Utils.compute_str_with_font(str, g)/2), ssy);
+        g.setFont(g.getFont().deriveFont(15f));
+
+        final int ddy = Utils.compute_str_with_font_h(str, g)*2;
+        final int ddx = 50;
+
+        ssy += 100;
+        ssy += ddy;
+        str = "</Number Request               :: ()";
+        g.drawString(str, ((int)W/2 - (int)Utils.compute_str_with_font(str, g)/2), ssy);
+
+        ssy += ddy;
+        str = "</Number Of States             :: ()";
+        g.drawString(str, ((int)W/2 - (int)Utils.compute_str_with_font(str, g)/2), ssy);
+
+        ssy += ddy;
+        str = "</Number Of Intents            :: ()";
+        g.drawString(str, ((int)W/2 - (int)Utils.compute_str_with_font(str, g)/2), ssy);
+
+        ssy += ddy;
+        str = "</Number Of Training Sentences :: ()";
+        g.drawString(str, ((int)W/2 - (int)Utils.compute_str_with_font(str, g)/2), ssy);
+
+        break;
+      }
+
 
       default: {
         System.out.println("@else state is not recognized.");

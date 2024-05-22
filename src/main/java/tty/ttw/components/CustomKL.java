@@ -18,57 +18,71 @@ public class CustomKL implements KeyListener{
 
     switch (code) {
       case KeyEvent.VK_ENTER: {
-        if (TPanel.state == AppState.OPENING) {
+        TPanel.state = AppState.OPENING;
+        break;
+      }
+      // for closing the local client
+      case KeyEvent.VK_ESCAPE: {
+        System.out.println("@ESCAPE >> "+true);
+        Pop p = new Pop(
+          "Exiting Application.",
+          5,
+          -20,
+          5,
+          5,
+          Type.OK,
+          100,
+          "Exit"
+        );
+
+        Utils.enq(TPanel.q, p);
+
+        TPanel.state = AppState.CLOSING;
+        break;
+      }
+      case KeyEvent.VK_M: {
+        if (TPanel.state == AppState.CLOSING) {
           Pop p = new Pop(
-            "Press <Escape/> To Kill Main Process." /* msg */,
+            "Can't Toggle Menu" /* msg */,
             5   /* starting x */, 
             -20 /* starting y */,
             5   /* arcwidth   */,
             5   /* archeight  */,
             Type.ERROR /* type of popUP */,
             100 /* max lifetime after death */,
-            "Kill Main" /* Giving description id */
+            "Menu/exit"
           );
 
           Utils.enq(TPanel.q, p);
-
-        } else if (TPanel.state == AppState.CLOSING) {
-           Pop p = new Pop(
-            "Can't Abort Kill Main Process." /* msg */,
-            5   /* starting x */, 
-            -20 /* starting y */,
-            5   /* arcwidth   */,
-            5   /* archeight  */,
-            Type.ERROR /* type of popUP */,
-            100 /* max lifetime after death */,
-            "Abort Kill"
-          );
-
-          Utils.enq(TPanel.q, p);
-
-        }
-        else {
-          TPanel.state = AppState.OPENING;
+        } else {
+          System.out.println("@M >> "+true);
+          TPanel.state = AppState.MENU;
         }
         break;
       }
-      case KeyEvent.VK_ESCAPE: {
+      case KeyEvent.VK_Q: {
         if (TPanel.state == AppState.CLOSING) {
-           Pop p = new Pop(
-            "Already Killing Main Process."/* msg */,
+          Pop p = new Pop(
+            "Already Shutting Down The Server." /* msg */,
             5   /* starting x */, 
             -20 /* starting y */,
             5   /* arcwidth   */,
             5   /* archeight  */,
             Type.OK /* type of popUP */,
             100 /* max lifetime after death */,
-            "Already Kill"
+            "Already Shut"
           );
 
           Utils.enq(TPanel.q, p);
         }
 
         TPanel.state = AppState.CLOSING;
+        break;
+      }
+
+      // @Incomplete adding things.
+      case KeyEvent.VK_S: {
+        TPanel.state = AppState.STATISTICS;
       }
     }
   }
